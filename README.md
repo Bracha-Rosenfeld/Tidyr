@@ -5,7 +5,7 @@
 ---
 
 your files are a mess. `.pdf` living next to a meme from 2019, three files named `final_FINAL_v2.png`. 
-Heapless fixes that. automatically. while you do literally anything else.
+Tidyr fixes that. automatically. while you do literally anything else.
 
 ---
 
@@ -22,8 +22,8 @@ Heapless fixes that. automatically. while you do literally anything else.
 ## get started
 
 ```bash
-git clone https://github.com/your-username/heapless
-cd heapless
+git clone https://github.com/your-username/tidyr
+cd tidyr
 pip install -r requirements.txt
 ```
 
