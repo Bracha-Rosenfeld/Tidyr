@@ -1,0 +1,7 @@
+rules:
+  PICTURES: [.jpg, .jpeg, .png, .gif, .webp]
+  DOCUMENTS: [.pdf, .docx, .txt]
+  MUSIC: [.mp3, .flac]
+  VIDEOS: [.mp4, .mov, .mkv]
+  Desktop/Code: [.py, .js, .html]
+  Desktop/Archives: [.zip, .rar]
