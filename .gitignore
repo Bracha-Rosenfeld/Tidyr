@@ -1,6 +1,8 @@
 #log of all files moved
 organizer.log
 
+#debugger file
+.vscode/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
