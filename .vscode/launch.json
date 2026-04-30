@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Tidyr: Run",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "args": ["--run", "${workspaceFolder}"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Tidyr: Dry Run",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "args": ["--run", "${workspaceFolder}", "--dry-run"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Tidyr: Undo",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "args": ["--undo"],
+            "console": "integratedTerminal"
+        }
+    ]
+}
