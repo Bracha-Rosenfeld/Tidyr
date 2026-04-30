@@ -1,7 +1,15 @@
-import os
+import argparse
+from organizer import mover
 
-folder = "/Users/yourname/Downloads"  # change this to a real folder
+parser = argparse.ArgumentParser(prog="tidyr")
+group = parser.add_mutually_exclusive_group(required=True)
+group.add_argument("--run", metavar="FOLDER", help="organize a folder")
+group.add_argument("--undo", action="store_true", help="undo last run")
+parser.add_argument("--dry-run", action="store_true", help="preview without moving")
 
-for filename in os.listdir(folder):
-    name, ext = os.path.splitext(filename)
-    print(f"{filename}  →  extension: {ext}")
+args = parser.parse_args()
+
+if args.undo:
+    mover.undo()
+else:
+    mover.run(args.run, dry_run=args.dry_run)
