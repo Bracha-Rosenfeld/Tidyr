@@ -2,7 +2,7 @@ import os
 import shutil
 import winreg
 from organizer.config import load_rules
-from organizer.logger import log_move, load_log, clear_log
+from organizer.logger import log_move, load_log, commit_session, pop_log
 
 SHELL_FOLDERS_KEY = r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders"
 
@@ -50,6 +50,7 @@ def run(folder, dry_run=False):
             shutil.move(filepath, dest)
             log_move(filepath, dest)
             print(f"✅ {filename}  →  {dest_folder}")
+    commit_session()
 
 def undo():
     moves = load_log()
@@ -60,4 +61,4 @@ def undo():
         if os.path.exists(entry["dst"]):
             shutil.move(entry["dst"], entry["src"])
             print(f"↩️  {os.path.basename(entry['dst'])}  →  restored")
-    clear_log()
+    pop_log()
