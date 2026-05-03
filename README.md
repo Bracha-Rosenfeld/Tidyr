@@ -35,13 +35,13 @@ that's it. you're basically a developer now.
 
 ```bash
 # set it and forget it
-python cli.py --watch ~/Downloads
+python cli.py --watch C:\Users\YourName\Downloads
 
 # organize what's already there
-python cli.py --run ~/Downloads
+python cli.py --run C:\Users\YourName\Downloads
 
 # see what *would* happen (for the anxious girlies)
-python cli.py --run ~/Downloads --dry-run
+python cli.py --run C:\Users\YourName\Downloads --dry-run
 
 # oops
 python cli.py --undo
@@ -55,13 +55,15 @@ open `config.yaml` and define your own rules:
 
 ```yaml
 rules:
-  Documents: [.pdf, .docx, .txt]
-  Images:    [.jpg, .png, .gif, .webp]
-  Videos:    [.mp4, .mov, .mkv]
-  Music:     [.mp3, .flac]
-  Code:      [.py, .js, .html]
-  Archives:  [.zip, .rar]
+  DOCUMENTS: [.pdf, .docx, .txt]
+  PICTURES:  [.jpg, .jpeg, .png, .gif, .webp]
+  VIDEOS:    [.mp4, .mov, .mkv]
+  MUSIC:     [.mp3, .flac]
+  Desktop/Code:     [.py, .js, .html]
+  Desktop/Archives: [.zip, .rar]
 ```
+
+> uppercase keys like `DOCUMENTS` and `PICTURES` resolve to your actual Windows folders. anything else gets created on your Desktop.
 
 no rules you didn't write.
 
